@@ -1,0 +1,9 @@
+**/build/
+.dart_tool/
+.packages
+.pub-cache/
+flutter_*.png
+.idea/
+android/local.properties
+ios/Flutter/Flutter.podspec
+ios/Pods/
