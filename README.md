@@ -68,12 +68,12 @@ assets/
    
 2. Install dependencies:
    ```bash
-    flutter pub get
-    ```
+   flutter pub get
+   
 3. Run the app:
-     ```bash
-    flutter run
-    ```
+   ```bash
+   flutter run
+
 © 2025 Sunali Rambukwella. All rights reserved.
 
 ## 📱 Screenshots
