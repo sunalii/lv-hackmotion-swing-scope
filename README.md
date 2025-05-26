@@ -1,56 +1,49 @@
-### Project Name: SwingScope
+# 🏌️‍♂️ Swing Scope
 
-### Description:
+**Swing Scope** is a modern, cross-platform Flutter application designed to visualize wrist motion data captured during golf swings. It processes motion data from JSON files and renders smooth line charts for **flexion/extension** and **ulnar/radial deviation** across time.
 
-**SwingScope** is a cross-platform Flutter application designed to visualize wrist motion data captured during golf swings. The app parses motion data from JSON files and displays detailed graphs of wrist **flexion/extension** and **ulnar/radial deviation** over time.
-
-Users can browse a list of recorded swings, inspect each swing individually, and analyze key metrics using smooth, interactive line graphs. The application supports intuitive navigation between swings and allows deletion of specific recordings to keep the dataset clean.
+The app is user-friendly, responsive on both Android and iOS, and allows easy inspection and management of recorded swing sessions.
 
 ---
 
-### Key Features:
+## 🚀 Key Features
 
-* 📋 **Home Page:** Displays a list of available swing recordings.
-* 📈 **Inspection Page:** Visualizes wrist motion metrics for selected swings.
-* 🔄 **Navigation:** Previous and Next buttons to cycle through swings.
-* ❌ **Delete Function:** Remove selected swings dynamically.
-* 🎯 **Clear Graphs:** Time-series line graphs for motion data.
-* 🚀 **Responsive UI:** Smooth and intuitive for both Android and iOS.
-
----
-
-### State Management:
-
-SwingScope uses **Cubit** from the [Flutter Bloc](https://pub.dev/packages/flutter_bloc) package for managing app state in a clean and scalable way. The `SwingCubit` handles:
-
-* Loading and storing the list of golf swing captures.
-* Tracking the currently selected swing.
-* Navigating between swings.
-* Deleting a selected swing and updating the state accordingly.
-
-**Why Cubit?**
-
-* Lightweight and easy to understand.
-* Suitable for simple UI state transitions.
-* Separates UI logic from business logic, making the app easier to maintain and test.
+- 📋 **Home Page**: View a scrollable list of available swing recordings.
+- 📈 **Inspection Page**: Inspect selected swing data visually with dynamic charts.
+- 🔁 **Navigation**: Jump between swings using Previous and Next controls.
+- 🗑️ **Delete Function**: Remove individual swing recordings with one tap.
+- 📊 **Line Graphs**: Time-series charts for both flexion/extension and ulnar/radial deviation.
+- 🧭 **Responsive UI**: Optimized for both Android and iOS platforms.
+- 🧩 **Custom App Icon**: Branded icon integrated for both Android and iOS.
 
 ---
 
-### **📦 Libraries Used**
+## 🧠 State Management
 
-Here’s a list of key Flutter packages used in the project:
+Swing Scope uses **Cubit** (via the [`flutter_bloc`](https://pub.dev/packages/flutter_bloc) package) to handle:
 
-| Package                    | Purpose                                                                                    |
-| -------------------------- | ------------------------------------------------------------------------------------------ |
-| `flutter_bloc`             | For state management using Cubit.                                                          |
-| `fl_chart`                 | To render smooth and customizable line graphs for flexion/extension and ulnar/radial data. |
-| `path_provider`            | To access device directories if persistent storage is later needed.                        |
-| `flutter_svg` *(optional)* | To include vector icons or illustrations (if used for UI polish).                          |
-| `intl` *(optional)*        | For date formatting if swing timestamps are displayed.                                     |
+- Loading swing data from JSON files
+- Navigating between swings
+- Managing selection and deletion state
+
+### Why Cubit?
+- Simple and lightweight
+- Perfect for handling straightforward app states
+- Keeps logic separate from UI
 
 ---
 
-### 📁 Example Directory Layout
+## 📦 Libraries Used
+
+| Package          | Purpose                                                                                  |
+|------------------|------------------------------------------------------------------------------------------|
+| `flutter_bloc`   | State management using Cubit architecture.                                               |
+| `fl_chart`       | Graph rendering for time-series swing motion data.                                       |
+| `path_provider`  | Accessing local file system directories.                                                 |
+
+---
+
+### 📁 Directory Layout
 
 ```
 lib/
@@ -63,3 +56,26 @@ lib/
 assets/
 └── swings/              # JSON swing capture files (1.json, 2.json, ...)
 ```
+
+---
+
+## 🛠 Setup Instructions
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/sunalii/lv-hackmotion-swing-scope.git
+   cd lv-hackmotion-swing-scope
+   
+2. Install dependencies:
+   ```bash
+    flutter pub get
+    ```
+3. Run the app:
+     ```bash
+    flutter run
+    ```
+© 2025 Sunali Rambukwella. All rights reserved.
+
+## 📱 Screenshots
+![Home Page](assets/screens/home.png)
+![Inspection Page](assets/screens/inspect.png)
